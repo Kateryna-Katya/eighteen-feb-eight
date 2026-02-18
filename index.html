@@ -15,7 +15,7 @@
         rel="stylesheet">
 
     <script src="https://unpkg.com/lucide@latest"></script>
-
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="style.css">
 
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
@@ -52,6 +52,42 @@
     </header>
 
     <main>
+    <section class="hero" id="hero">
+        <div id="hero-canvas" class="hero__canvas"></div>
+    
+        <div class="container hero__container">
+            <div class="hero__content">
+                <div class="hero__badge" data-aos="fade-right">
+                    <span class="hero__badge-dot"></span>
+                    Технология нового поколения
+                </div>
+    
+                <h1 class="hero__title" data-aos="fade-up" data-aos-delay="200">
+                    Постройте карьеру, которая <br>
+                    <span class="text-highlight">работает на вас</span>
+                </h1>
+    
+                <p class="hero__subtitle" data-aos="fade-up" data-aos-delay="400">
+                    Инновационная технология карьерного апгрейда в Германии. Переосмыслите подход к развитию и откройте
+                    новые возможности в европейском тех-секторе.
+                </p>
+    
+                <div class="hero__actions" data-aos="fade-up" data-aos-delay="600">
+                    <a href="#contact" class="btn btn--primary">
+                        Начать сейчас
+                        <i data-lucide="zap"></i>
+                    </a>
+                    <a href="#strategy" class="btn btn--outline">
+                        Узнать детали
+                    </a>
+                </div>
+            </div>
+        </div>
+    
+        <div class="hero__scroll" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
+            <div class="hero__scroll-line"></div>
+        </div>
+    </section>
     </main>
 
     <footer class="footer">
@@ -120,7 +156,8 @@
             </div>
         </div>
     </footer>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="script.js"></script>
 </body>
 
