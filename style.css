@@ -357,3 +357,214 @@ a {
         justify-content: center;
     }
 }
+/* --- ОБЩИЕ ЗАГОЛОВКИ СЕКЦИЙ --- */
+.section-header {
+    margin-bottom: 60px;
+}
+
+.section-header__subtitle {
+    display: block;
+    color: var(--color-yellow);
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.section-header__title {
+    font-family: var(--font-accent);
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 900;
+    line-height: 1.2;
+}
+
+/* --- STRATEGY SECTION --- */
+.strategy {
+    padding: 100px 0;
+}
+
+.strategy__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+.strategy-card {
+    background: var(--color-gray);
+    padding: 40px;
+    border-radius: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    position: relative;
+    transition: var(--transition);
+}
+
+.strategy-card:hover {
+    border-color: var(--color-yellow);
+    transform: translateY(-10px);
+}
+
+.strategy-card--featured {
+    border: 1px solid var(--color-yellow);
+    background: linear-gradient(145deg, #1a1a1a 0%, #0a0a0a 100%);
+}
+
+.strategy-card__icon {
+    width: 60px;
+    height: 60px;
+    background: rgba(243, 255, 0, 0.1);
+    color: var(--color-yellow);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+    margin-bottom: 25px;
+}
+
+.strategy-card__icon i {
+    width: 30px;
+    height: 30px;
+}
+
+.strategy-card__title {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+}
+
+.strategy-card__text {
+    color: var(--color-text-dim);
+    margin-bottom: 25px;
+    font-size: 0.95rem;
+}
+
+.strategy-card__list {
+    margin-top: 20px;
+}
+
+.strategy-card__list li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.85rem;
+    margin-bottom: 10px;
+    color: var(--color-white);
+}
+
+.strategy-card__list i {
+    width: 16px;
+    color: var(--color-yellow);
+}
+
+.strategy-card__badge {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: var(--color-yellow);
+    color: var(--color-black);
+    padding: 4px 12px;
+    border-radius: 50px;
+    font-size: 0.7rem;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+/* --- EXPERTISE SECTION --- */
+.expertise {
+    padding: 100px 0;
+    background: #0d0d0d;
+}
+
+.expertise__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.expertise__description {
+    color: var(--color-text-dim);
+    margin-bottom: 40px;
+    font-size: 1.1rem;
+}
+
+.skill-item {
+    margin-bottom: 25px;
+}
+
+.skill-item__info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.skill-item__bar {
+    height: 6px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.skill-item__progress {
+    height: 100%;
+    background: var(--color-yellow);
+    border-radius: 10px;
+}
+
+.expertise__image-container {
+    position: relative;
+}
+
+.expertise__img {
+    width: 100%;
+    border-radius: 30px;
+    filter: grayscale(1) contrast(1.2);
+    transition: var(--transition);
+}
+
+.expertise__image-container:hover .expertise__img {
+    filter: grayscale(0) contrast(1);
+}
+
+.expertise__experience-card {
+    position: absolute;
+    bottom: -30px;
+    left: -30px;
+    background: var(--color-yellow);
+    color: var(--color-black);
+    padding: 30px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.expertise__experience-card .number {
+    font-size: 2.5rem;
+    font-weight: 900;
+    line-height: 1;
+}
+
+.expertise__experience-card .label {
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+@media (max-width: 992px) {
+    .expertise__wrapper {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .expertise__image-side {
+        order: -1;
+    }
+
+    .expertise__experience-card {
+        left: 20px;
+        bottom: -20px;
+    }
+}
