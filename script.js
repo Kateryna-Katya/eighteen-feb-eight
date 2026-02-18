@@ -94,3 +94,26 @@ document.addEventListener('DOMContentLoaded', () => {
 
     initHero3D();
 });
+// Внутри document.addEventListener('DOMContentLoaded', ...)
+
+const initSwiper = () => {
+    new Swiper('.reviews-slider', {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        loop: true,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        breakpoints: {
+            768: {
+                slidesPerView: 2,
+            },
+            1100: {
+                slidesPerView: 3,
+            }
+        }
+    });
+};
+
+initSwiper();

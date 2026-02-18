@@ -17,7 +17,7 @@
     <script src="https://unpkg.com/lucide@latest"></script>
 <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="style.css">
-
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
 </head>
 
@@ -191,6 +191,106 @@
             </div>
         </div>
     </section>
+    <section class="reviews" id="reviews">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-header__subtitle">Доверие и экспертность</span>
+                <h2 class="section-header__title">Истории успеха</h2>
+            </div>
+    
+            <div class="swiper reviews-slider" data-aos="fade-up" data-aos-delay="200">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="review-card">
+                            <div class="review-card__user">
+                                <div class="review-card__avatar">AM</div>
+                                <div class="review-card__info">
+                                    <h4 class="review-card__name">Alexander M.</h4>
+                                    <p class="review-card__role">Senior Developer @ Berlin Tech</p>
+                                </div>
+                            </div>
+                            <p class="review-card__text">
+                                «Решения, которые меняют правила игры. Благодаря платформе смог переосмыслить подход к
+                                развитию и выйти на новый уровень дохода в Германии всего за 3 месяца».
+                            </p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="review-card">
+                            <div class="review-card__user">
+                                <div class="review-card__avatar">DK</div>
+                                <div class="review-card__info">
+                                    <h4 class="review-card__name">Daniel K.</h4>
+                                    <p class="review-card__role">Project Manager</p>
+                                </div>
+                            </div>
+                            <p class="review-card__text">
+                                «Экспертная поддержка на всех этапах. Методологии, доказавшие эффективность, помогли пройти
+                                сложный отбор в международную компанию».
+                            </p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="review-card">
+                            <div class="review-card__user">
+                                <div class="review-card__avatar">LS</div>
+                                <div class="review-card__info">
+                                    <h4 class="review-card__name">Laura S.</h4>
+                                    <p class="review-card__role">UI/UX Designer</p>
+                                </div>
+                            </div>
+                            <p class="review-card__text">
+                                «Пошаговый путь, понятный каждому. Открыла новые возможности для пассивного дохода и
+                                полностью обновила профессиональное портфолио».
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="blog" id="blog">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-header__subtitle">База знаний</span>
+                <h2 class="section-header__title">Наш блог</h2>
+            </div>
+    
+            <div class="blog__grid">
+                <article class="blog-card" data-aos="zoom-in-up" data-aos-delay="100">
+                    <div class="blog-card__date">18 Feb 2026</div>
+                    <h3 class="blog-card__title">AI-инструменты для реальных задач: как не остаться за бортом</h3>
+                    <p class="blog-card__excerpt">Разбираем передовую цифровую инфраструктуру, которая работает на вас уже
+                        сегодня.</p>
+                    <a href="#contact" class="blog-card__link">
+                        Читать далее <i data-lucide="arrow-right"></i>
+                    </a>
+                </article>
+    
+                <article class="blog-card blog-card--accent" data-aos="zoom-in-up" data-aos-delay="200">
+                    <div class="blog-card__date">15 Feb 2026</div>
+                    <h3 class="blog-card__title">Стратегия роста на базе инноваций в странах ЕС</h3>
+                    <p class="blog-card__excerpt">Методологии, доказавшие эффективность при релокации и смене карьерного
+                        трека.</p>
+                    <a href="#contact" class="blog-card__link">
+                        Читать далее <i data-lucide="arrow-right"></i>
+                    </a>
+                </article>
+    
+                <article class="blog-card" data-aos="zoom-in-up" data-aos-delay="300">
+                    <div class="blog-card__date">10 Feb 2026</div>
+                    <h3 class="blog-card__title">Технологии, которые работают на вас: пассивный доход</h3>
+                    <p class="blog-card__excerpt">Как построить карьеру, которая обеспечивает стабильность и расширяет
+                        горизонты.</p>
+                    <a href="#contact" class="blog-card__link">
+                        Читать далее <i data-lucide="arrow-right"></i>
+                    </a>
+                </article>
+            </div>
+        </div>
+    </section>
     </main>
 
     <footer class="footer">
@@ -261,6 +361,7 @@
     </footer>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
 </body>
 
