@@ -702,3 +702,235 @@ a {
 .blog-card:hover .blog-card__link i {
     transform: translateX(5px);
 }
+/* --- CONTACT SECTION --- */
+.contact {
+    padding: 120px 0;
+    background: linear-gradient(to bottom, var(--color-black), #050505);
+}
+
+.contact__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.contact__text {
+    color: var(--color-text-dim);
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+}
+
+.contact__labels {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact__label {
+    font-weight: 700;
+    color: var(--color-yellow);
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+/* FORM STYLES */
+.contact__form-container {
+    background: var(--color-gray);
+    padding: 50px;
+    border-radius: 40px;
+    border: 1px solid rgba(243, 255, 0, 0.1);
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form__input {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 18px 25px;
+    border-radius: 15px;
+    color: var(--color-white);
+    font-family: var(--font-main);
+    transition: var(--transition);
+}
+
+.form__input:focus {
+    outline: none;
+    border-color: var(--color-yellow);
+    background: rgba(243, 255, 0, 0.02);
+}
+
+.form__captcha {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 10px 0;
+}
+
+.form__captcha-text {
+    font-weight: 700;
+    color: var(--color-yellow);
+    white-space: nowrap;
+}
+
+.form__input--captcha {
+    width: 120px;
+    text-align: center;
+}
+
+.form__checkbox {
+    display: flex;
+    gap: 12px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    color: var(--color-text-dim);
+    align-items: flex-start;
+}
+
+.form__checkbox input {
+    display: none;
+}
+
+.form__checkbox-custom {
+    min-width: 20px;
+    height: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 6px;
+    position: relative;
+}
+
+.form__checkbox input:checked+.form__checkbox-custom {
+    background: var(--color-yellow);
+    border-color: var(--color-yellow);
+}
+
+.form__checkbox input:checked+.form__checkbox-custom::after {
+    content: '✓';
+    position: absolute;
+    color: var(--color-black);
+    font-weight: 900;
+    font-size: 14px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.form__message {
+    padding: 15px;
+    border-radius: 10px;
+    display: none;
+    font-weight: 600;
+    text-align: center;
+}
+
+.form__message--success {
+    display: block;
+    background: rgba(0, 255, 100, 0.1);
+    color: #00ff64;
+}
+
+/* MOBILE MENU */
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100vh;
+    background: var(--color-black);
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.mobile-menu.active {
+    right: 0;
+}
+
+.mobile-menu__list {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.mobile-menu__list a {
+    font-size: 2rem;
+    font-family: var(--font-accent);
+    font-weight: 900;
+}
+
+/* BURGER ANIMATION */
+.burger.active span {
+    background: transparent;
+}
+
+.burger.active span::before {
+    transform: rotate(45deg);
+    top: 0;
+}
+
+.burger.active span::after {
+    transform: rotate(-45deg);
+    top: 0;
+}
+
+/* COOKIE POPUP */
+.cookie-popup {
+    position: fixed;
+    bottom: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--color-gray);
+    border: 1px solid rgba(243, 255, 0, 0.2);
+    padding: 20px 30px;
+    border-radius: 20px;
+    z-index: 2000;
+    width: 90%;
+    max-width: 600px;
+    transition: 0.5s ease;
+}
+
+.cookie-popup.active {
+    bottom: 30px;
+}
+
+.cookie-popup__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.cookie-popup p {
+    font-size: 0.85rem;
+    color: var(--color-text-dim);
+}
+
+.btn--small {
+    padding: 8px 20px;
+    font-size: 0.75rem;
+}
+
+@media (max-width: 768px) {
+    .contact__wrapper {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .contact__form-container {
+        padding: 30px 20px;
+    }
+
+    .cookie-popup__content {
+        flex-direction: column;
+        text-align: center;
+    }
+}
